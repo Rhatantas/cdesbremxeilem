@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define TAMANHO 10
+//RAND
+//*a função faz o sorteio de apenas um)1_ Valor inteiro positivo ( DE CADA VEZ), Proporcional A Memoria e Hora Atual
+//SRand
+// Altera o tempo interno utilizado pela função aleatoria: rand aumentando  o nivel de aleatoriedade do numero sorteado
+//Como usar a funçaõ srand ? Include <time.h> => Pertence a essa biblioteca é chamada apos a declamação de todas as variaveis (apenas uma vez).
+
+int main()
+{
+    int vetor[TAMANHO],Indice;
+    srand(time(NULL));  //AUMENTA O GRAU DE ALEATORIEDADE
+    printf("vetor com %i termos aleatorio:\n" , TAMANHO);
+    printf("vetor: [ ");
+    for(Indice = 0;Indice < TAMANHO; Indice++)
+    {
+            vetor[Indice] = rand();
+            printf(" %i " , vetor[Indice]);
+
+    }
+    printf(" ].\n");
+
+    return 0;
